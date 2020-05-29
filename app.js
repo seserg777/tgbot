@@ -53,7 +53,6 @@ bot.onText(/\/ean/, function onFindProductByEan(msg) {
 	const ean = msg.text.replace( /^\D+/g, '');
 	if(ean){
 		getProductByEan(ean).then(function(r){
-			//console.log(msg.text);
 			
 			let html = '<a href="http://deps.ua//components/com_jshopping/files/img_products/thumb_' + r.main_image + '"><b>' + r.title +  '</b></a>' + '\r\n';
 			html = html + 'ean: ' + r.product_ean + '\r\n';
