@@ -1,1 +1,1 @@
-# tgbot
+# Node.js bot for telegram
