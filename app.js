@@ -88,16 +88,12 @@ bot.onText(/\/ean/, function onFindProductByEan(msg) {
 });*/
 
 const getProductByEan =  (ean) => {
-	//console.log('getProductByEan');
 	return new Promise(function(resolve, reject) {
 		axios.get( 'http://node.peak-systems.net:3000/product/ean/' + ean )
 		.then(response => {
-			//console.log('getProductByEan then');
-			//console.log(response.data);
 			resolve(response.data);
 		})
 		.catch(error => {
-			//console.log(error);
 			console.log('getProductByEan error');
 			reject();
 		});
